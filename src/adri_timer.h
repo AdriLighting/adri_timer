@@ -4,25 +4,28 @@
 
 	class adri_timer
 	{
-		unsigned long 	_millis;
 		String 			_title;
-		unsigned long	_duration_max;	
+		int				_duration_max;	
 		boolean 		_activate;
 
 	public:
-		adri_timer(unsigned long max, String title, boolean activate);
+		adri_timer(int max, String title, boolean activate);
+		~adri_timer(){}
 		unsigned long 	_duration;	
 
 		void 	loop(boolean & statu);
 		boolean loop();
-		boolean loop(unsigned long v);
+		boolean loop(int v);
 		boolean loop_stop();
 		boolean loop_wait();
 		void 	loop_getTime(unsigned long & v);
 		
 		void 	set_duration(unsigned long val);
+		void 	set_duration_max(int val);
 		void 	activate();
 		void 	activate(boolean val);
 		boolean isActivate();
+
 	};
+	extern unsigned long TEST_currentMillis;
 #endif
