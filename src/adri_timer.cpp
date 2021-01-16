@@ -34,7 +34,7 @@ boolean adri_timer::loop(){
 	}
 	return false;	
 }
-boolean adri_timer::loop(int v){
+boolean adri_timer::loop(unsigned long v){
 	if (!_activate) return false;
 
 	unsigned long tNow = millis();
@@ -69,7 +69,7 @@ void adri_timer::loop_getTime(unsigned long & v) {
 	v =  (tNow - _duration);
 }
 
-void 	adri_timer::set_duration_max(int val) 			{_duration_max = val;}
+void 	adri_timer::set_duration_max(unsigned long val)	{_duration_max = val;}
 void 	adri_timer::set_duration(unsigned long val) 	{_duration = val;}
 boolean adri_timer::isActivate()						{return _activate;}
 void adri_timer::activate(boolean val){
