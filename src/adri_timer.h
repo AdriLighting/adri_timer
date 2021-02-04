@@ -5,10 +5,12 @@
 	class adri_timer
 	{
 		String 			_title;
-		unsigned long	_duration_max;	
 		boolean 		_activate;
 
 	public:
+		unsigned long	_duration_max;	
+
+		
 		adri_timer(int max, String title, boolean activate);
 		~adri_timer(){}
 		unsigned long 	_duration;	
