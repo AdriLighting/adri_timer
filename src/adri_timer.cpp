@@ -2,7 +2,7 @@
 
 	// unsigned long	_adri_timer_millis;	
 adri_timer::adri_timer(int max, String title, boolean activate){
-	unsigned long tNow = millis();
+	unsigned long 	tNow = millis();
 	_title 			= title;
 	_activate 		= activate;
 	_duration_max 	= max;

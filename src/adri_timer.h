@@ -9,9 +9,10 @@
 
 	public:
 		int				_duration_max;	
+		unsigned long 	_duration;	
+		
 		adri_timer(int max, String title, boolean activate);
 		~adri_timer(){}
-		unsigned long 	_duration;	
 
 		void 	loop(boolean & statu);
 		boolean loop();
