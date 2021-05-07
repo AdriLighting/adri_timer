@@ -17,7 +17,7 @@ void adri_timer::loop(boolean & statu){
 	if (!_activate) {statu = false; return;}
 
 	unsigned long  tNow = millis();
-	if ((tNow - _duration) > _duration_max) {
+	if ((tNow - _duration) > (unsigned long)_duration_max) {
 		statu = true;
 		_duration = tNow;
 		return;
@@ -28,7 +28,7 @@ boolean adri_timer::loop(){
 	if (!_activate) return false;
 
 	unsigned long tNow = millis();
-	if ((tNow - _duration) > _duration_max) {
+	if ((tNow - _duration) > (unsigned long)_duration_max) {
 		_duration = tNow;
 		return true;
 	}
@@ -38,7 +38,7 @@ boolean adri_timer::loop(int v){
 	if (!_activate) return false;
 
 	unsigned long tNow = millis();
-	if ( (tNow - _duration) > v) {
+	if ( (tNow - _duration) > (unsigned long)v) {
 		_duration = tNow;
 		return true;
 	}
@@ -48,7 +48,7 @@ boolean adri_timer::loop_stop(){
 	if (!_activate) return false;
 
 	unsigned long tNow = millis();
-	if ((tNow - _duration) > _duration_max) {
+	if ((tNow - _duration) > (unsigned long)_duration_max) {
 		_activate = false;
 		return true;
 	}
@@ -58,7 +58,7 @@ boolean adri_timer::loop_wait(){
 	if (!_activate) return false;
 
 	unsigned long tNow = millis();
-	if ((tNow - _duration) > _duration_max) {
+	if ((tNow - _duration) > (unsigned long)_duration_max) {
 		return true;
 	}
 	return false;	
